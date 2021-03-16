@@ -272,6 +272,7 @@ namespace Decisions
             this.Controls.Add(this.driveOutput);
             this.Controls.Add(this.driveButton);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Decisions";
             this.ResumeLayout(false);
             this.PerformLayout();
