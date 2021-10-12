@@ -110,6 +110,7 @@ namespace Decisions
             this.ageInput.Name = "ageInput";
             this.ageInput.Size = new System.Drawing.Size(60, 29);
             this.ageInput.TabIndex = 5;
+            this.ageInput.TextChanged += new System.EventHandler(this.ageInput_TextChanged);
             // 
             // workButton
             // 

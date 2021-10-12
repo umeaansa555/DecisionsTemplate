@@ -22,7 +22,17 @@ namespace Decisions
             /// Create an if statement to check age and display a 
             /// message stating "You can drive now" if age is 16. 
             /// If not 16 then display, "You are not 16".
-          
+
+            int age = 16;
+
+            if (age > 16)
+            {
+                driveOutput.Text = " You are NOT old enough to drive.";
+            }
+            else
+            {
+                driveOutput.Text = " You are old enough to drive.";
+            }
 
         }
 
@@ -32,8 +42,17 @@ namespace Decisions
             /// that variable to determine if the person is old 
             /// enough to vote. Display an appropriate message based
             /// on whether they can or can't vote            
-           
 
+            int age = Convert.ToInt16(ageInput.Text);
+
+            if(age < 18)
+            {
+                voteOutput.Text = "You can't vote.";
+            }
+            else
+            {
+                voteOutput.Text = "You can vote.";
+            }
         }
 
         private void workButton_Click(object sender, EventArgs e)
@@ -49,7 +68,17 @@ namespace Decisions
             /// Sample output for 45 hours:
             /// You worked 40 hours plus 5 hours overtime
 
-      
+            int totalHours = Convert.ToInt32(hoursInput.Text);
+           
+            if(totalHours > 40)
+            {
+                int overTime = totalHours - 40;
+                workOutput.Text = $"You worked 40 hours plus {overTime} hrs overtime.";
+            }
+            else
+            {
+                workOutput.Text = $"You worked {totalHours} hours";
+            }
 
         }
 
@@ -79,6 +108,11 @@ namespace Decisions
             /// Sample output for inputs 2016
             /// 2016 is a leap year
            
+
+        }
+
+        private void ageInput_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
