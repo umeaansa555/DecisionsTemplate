@@ -94,7 +94,17 @@ namespace Decisions
             /// Sample output for inputs 22, 77
             /// The max value is: 77
             
+            int number1 = Convert.ToInt32(num1Input.Text);
+            int number2 = Convert.ToInt32(num2Input.Text);
 
+            if(number1 > number2)
+            {
+                maxOutput.Text = $" The max value is: {number1}";
+            }
+            else
+            {
+                maxOutput.Text = $" The max value is: {number2}";
+            }
         }
 
         private void yearButton_Click(object sender, EventArgs e)
@@ -108,6 +118,19 @@ namespace Decisions
             /// Sample output for inputs 2016
             /// 2016 is a leap year
            
+            int year = Convert.ToInt32(yearInput.Text);
+
+            //mod operation with % symbol
+            //== (double equals) means the same as = (single equal symbol) in math. left side = right side
+            // basically: if the year is divisible by 4 with a remainder of exactly 0, run this. else, run the other part.
+            if (year % 4 == 0)
+            {
+                yearOutput.Text = $"{year} is a leap year";
+            }
+            else
+            {
+                yearOutput.Text = $"{year} is not a leap year";
+            }
 
         }
 
